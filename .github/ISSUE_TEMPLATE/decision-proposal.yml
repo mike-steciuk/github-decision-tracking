@@ -1,0 +1,65 @@
+name: Decision proposal
+description: Propose and discuss an engineering decision
+title: "[Decision]: "
+labels:
+  - decision/proposed
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this issue for discussion. After a decision is reached, create a
+        durable record in `decisions/` and link it here.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem, constraint, or opportunity requires a decision?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What do you propose, and what outcome should it produce?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What credible alternatives exist and what are their tradeoffs?
+    validations:
+      required: true
+  - type: textarea
+    id: short-term-impact
+    attributes:
+      label: Short-term impact
+      description: Migration, delivery risk, cost, and immediately affected systems or teams.
+    validations:
+      required: true
+  - type: textarea
+    id: long-term-impact
+    attributes:
+      label: Long-term impact
+      description: Maintenance, scalability, operations, security, and reversibility.
+    validations:
+      required: true
+  - type: input
+    id: supersedes
+    attributes:
+      label: Prior decisions this may replace
+      description: Decision IDs or links; enter "None" when not applicable.
+      placeholder: DEC-0007, DEC-0012
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Final decision
+      description: Leave blank while discussing; an owner or moderator fills this in at resolution.
+  - type: textarea
+    id: follow-up
+    attributes:
+      label: Consequences and follow-up
+      description: Follow-up work, review dates, success measures, and known tradeoffs.
+
