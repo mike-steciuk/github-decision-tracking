@@ -9,6 +9,8 @@ owners:
   - team-or-handle
 supersedes: []
 superseded_by: null
+related_decisions: []
+overrides: []
 discussion: https://github.com/mike-steciuk/github-decision-tracking/issues/NNN
 ---
 
@@ -45,6 +47,21 @@ What credible alternatives were considered, and why were they not selected?
 ## Replaces
 
 List decision IDs this record supersedes, or `None`.
+
+## Related decisions
+
+List relevant decisions from this or a linked org, department, team, project,
+or service decision set. Use qualified references such as `org:DEC-0042` so
+the source can be resolved through `decisions/README.md`. Explain the
+relationship when it is not obvious.
+
+## Scoped overrides
+
+List any broader decisions this decision intentionally overrides within its
+declared scope, or `None`. For each override, state the qualified decision
+reference, the exact scope of the exception, and why the broader direction is
+not suitable here. An override does not supersede or invalidate the broader
+decision outside this record's scope.
 
 ## Consequences and follow-up
 

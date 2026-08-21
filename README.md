@@ -15,6 +15,24 @@ engineering decisions.
 6. If a later decision replaces it, mark the old record `superseded` and link
    both records in their `supersedes` / `superseded_by` fields.
 
+## Hierarchical decision sets
+
+Each repository keeps its own decision records and may link to broader
+organization, department, team, project, or service decision indexes in the
+**Decision sources** table in `decisions/README.md`. References to decisions in
+another set use the registered namespace, for example `org:DEC-0042`.
+
+Applicability is based on declared scope, not the order of sources. Broader
+accepted decisions remain active unless a narrower accepted decision explicitly
+lists one in `overrides` and defines the scope and rationale for the exception.
+
+`supersedes` and `overrides` are intentionally different:
+
+- `supersedes` retires an earlier decision and changes the active direction in
+  that decision set.
+- `overrides` creates a scoped exception to a broader decision, which remains
+  active outside the exception.
+
 Issues hold the conversation; versioned decision records hold the durable
 outcome. Pull requests provide an auditable approval trail.
 
@@ -37,4 +55,3 @@ the applicable decision IDs in pull requests.
 
 Decision files use `NNNN-short-kebab-title.md`, for example
 `0001-use-postgresql-for-system-of-record.md`. IDs never change or get reused.
-
