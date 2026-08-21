@@ -1,3 +1,9 @@
+<!--
+Use this template to draft a GitHub Decision proposal issue.
+Do not add a decision file to this directory until the proposal is accepted.
+When accepted, set status to accepted and preserve the issue link.
+-->
+
 ---
 id: DEC-NNNN
 title: Short decision title
